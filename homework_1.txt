@@ -1,0 +1,66 @@
+Task 1 
+
+long_phrase = len ("Насколько проще было бы писать программы, если бы не заказчики")
+short_phrase = len ("640Кб должно хватить для любых задач. Билл Гейтс (по легенде)")
+long_phrase > short_phrase
+
+
+Task 2
+
+starting_value_in_byte = 224059720
+byte_in_mbyte = 2**20
+result = starting_value_in_byte / byte_in_mbyte
+a = round (result, 3), "mb"
+print ("Объем файла равен", a )
+
+Task 3
+
+print("Сейчас узнаем Ваш знак зодиака")
+month = str( input("Введите месяц рождения  ")) 
+date = int( input("Введите число рождения  "))
+if (month == "январь" and date >= 21) or (month == "январь" and date <= 31) or (month == "февраль" and date <= 18):
+    print("Водолей")
+elif (month == "февраль" and date >= 19 ) or (month == "февраль" and date <= 29) or (month == "март" and date <= 20):
+    print("Рыбы") 
+elif (month == "март" and date >= 21) or (month == "март" and date <= 31) or (month == "апрель" and date <= 19):
+    print("Овен")
+elif (month == "апрель" and date >= 20) or (month == "апрель" and date <= 30) or (month == "май" and date <=20):
+    print("Телец")
+elif (month == "май" and date >= 21) or (month == "май" and date <= 31) or (month == "июнь" and date <=21):
+    print("Близнецы")
+elif (month == "июнь" and date >= 22) or (month == "июнь" and date <= 30) or (month == "июль" and date <=22):
+    print("Рак")
+elif (month == "июль" and date >= 23) or (month == "июль" and date <= 31) or (month == "август" and date <=22):
+    print("Лев")
+elif (month == "август" and date >= 23) or (month == "август" and date <= 31) or (month == "сентябрь" and date <=22):
+    print("Дева")
+elif (month == "сентябрь" and date >= 23) or (month == "сентябрь" and date <= 30) or (month == "октябрь" and date <=23):
+    print("Весы")
+elif (month == "октябрь" and date >= 24) or (month == "октябрь" and date <= 31) or (month == "ноябрь" and date <=22):
+    print("Скорпион")
+elif (month == "ноябрь" and date >= 23) or (month == "ноябрь" and date <= 30) or (month == "декабрь" and date <=21):
+    print("Стрелец") 
+elif (month == "декабрь" and date >= 22) or (month == "декабрь" and date <= 31) or (month == "январь" and date <=20):
+    print("Козерог")     
+
+
+Task 4
+
+print ("Калькулятор для финансового планирования")
+salary = int (input ("Введите Вашу ежемесячную зарплату\n"))
+ipoteka_per = int(input ("Введите сколько процентов уходит на ипотеку\n"))
+ipoteka_money = ipoteka_per / 100
+life_per = int (input ("Введите сколько процентов уходит на жизнь\n"))
+life_money = life_per / 100
+salary_save_money_year = (1 - ipoteka_money - life_money) * salary * 12
+bonus = int (input ("Введите количество премий за год\n"))
+bonus_money = bonus * salary
+bonus_holiday_money = bonus_money / 2
+bonus_save_money_year = bonus_money - bonus_holiday_money
+ipoteka_money_year = salary * 12 * ipoteka_money
+all_save_money_year = salary_save_money_year + bonus_save_money_year
+print("На ипотеку было потрачено\n", ipoteka_money_year, "рублей")
+print("Было накоплено\n",all_save_money_year, "рублей")
+print("Было потрачено на отпуск\n",bonus_holiday_money, "рублей")
+
+
